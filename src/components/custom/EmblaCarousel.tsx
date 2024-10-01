@@ -37,7 +37,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                     <p
                       className="text-center lg:text-center text-base lg:text-lg w-full my-3 capitalize relative lg:w-[70%] font-medium"
                       dir="ltr">
-                      <span className="absolute w-full h-full bg-blue-200 skew-y-2 -skew-x-12 blur-2xl -z-10 "></span>
+                      <span className="absolute w-1/2 h-1/2 lg:w-full lg:h-full bg-blue-200 skew-y-2 -skew-x-12 blur-2xl -z-10 "></span>
                       {slide.para}
                     </p>
                   </div>

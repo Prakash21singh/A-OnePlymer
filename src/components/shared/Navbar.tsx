@@ -8,7 +8,6 @@ import { navbarLinks } from "../../constants";
 import { Link } from "react-router-dom";
 import { IconChevronDown } from "@tabler/icons-react";
 import { MobileNavbar } from "..";
-import * as Dialog from "@radix-ui/react-dialog";
 const Navbar = () => {
   return (
     <div className="w-full flex items-center justify-between lg:justify-evenly px-10 relative z-10 py-10">

@@ -1,4 +1,4 @@
-import { About, Carousel, Hero } from "@/components";
+import { About, Carousel, Hero, Glance, Products } from "@/components";
 
 const LandingPage = () => {
   return (
@@ -6,6 +6,8 @@ const LandingPage = () => {
       <Hero />
       <Carousel />
       <About />
+      <Glance />
+      <Products />
     </div>
   );
 };

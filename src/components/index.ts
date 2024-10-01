@@ -7,3 +7,5 @@ export const MobileNavbar = lazy(() => import("./custom/MobileNavbar"));
 export const Hero = lazy(() => import("./section/LandingPage/Hero"));
 export const Carousel = lazy(() => import("./section/LandingPage/Carousel"));
 export const About = lazy(() => import("./section/LandingPage/About"));
+export const Glance = lazy(() => import("./section/LandingPage/Glance"));
+export const Products = lazy(() => import("./section/LandingPage/Products"));

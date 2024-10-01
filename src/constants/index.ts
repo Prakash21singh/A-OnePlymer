@@ -72,3 +72,42 @@ export const footerProductsLinks = [
     link: "",
   },
 ];
+
+export const productsCardData = [
+  {
+    title: "Plywood",
+    description:
+      "Versatile and durable, our plywood is perfect for a variety of applications, providing reliable strength and stability for all your projects.",
+    image: "/carpenter.jpg",
+  },
+  {
+    title: "Marine Plywood",
+    description:
+      "Designed for high moisture environments, our marine plywood offers superior resistance to water damage, ensuring longevity and durability.",
+    image: "/cutter.jpg",
+  },
+  {
+    title: "Calibrated Plywood",
+    description:
+      "Achieve precision and consistency with our calibrated plywood, ideal for applications requiring uniform thickness and exceptional finish quality.",
+    image: "/architecture.jpg",
+  },
+  {
+    title: "Plywood Two",
+    description:
+      "Versatile and durable, our plywood is perfect for a variety of applications, providing reliable strength and stability for all your projects.",
+    image: "/carpenter.jpg",
+  },
+  {
+    title: "Marine Plywood Two",
+    description:
+      "Designed for high moisture environments, our marine plywood offers superior resistance to water damage, ensuring longevity and durability.",
+    image: "/cutter.jpg",
+  },
+  {
+    title: "Calibrated Plywood Two",
+    description:
+      "Achieve precision and consistency with our calibrated plywood, ideal for applications requiring uniform thickness and exceptional finish quality.",
+    image: "/architecture.jpg",
+  },
+];

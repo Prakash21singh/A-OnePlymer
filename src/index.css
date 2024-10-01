@@ -124,6 +124,10 @@
     box-shadow: inset 0 0 0 0.2rem var(--text-body);
   }
 }
+.ytp-chrome-top,
+.ytp-show-cards-title {
+  display: none;
+}
 
 @media (min-width: 1024px) {
   .embla__controls {
