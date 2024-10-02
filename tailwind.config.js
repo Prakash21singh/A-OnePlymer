@@ -4,6 +4,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        carousal: "url('/carpenter.jpg')",
+      },
       fontFamily: {
         lato: ["Lato", "poppins"],
       },
