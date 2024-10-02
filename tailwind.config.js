@@ -14,6 +14,10 @@ export default {
         },
         yellow: {
           1: "#F0A500",
+          2: "#F4CE14",
+        },
+        gray: {
+          1: "#F6F5F5",
         },
         white: {
           DEFAULT: "#F6F6F6",
@@ -24,6 +28,9 @@ export default {
         four: "#333333",
         primary: "#f8ffe4",
         secondary: "#e5f0fe",
+        red: {
+          1: "#B8001F",
+        },
       },
       screens: {
         "-md": "930px",
