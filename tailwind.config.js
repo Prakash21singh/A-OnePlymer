@@ -5,10 +5,14 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        carousal: "url('/carpenter.jpg')",
+        cr1: "url('/cr1.jpg')",
+        cr2: "url('/cr2.jpg')",
+        cr3: "url('/cr3.jpg')",
+        cr4: "url('/cr4.jpg')",
+        cr5: "url('/cr5.jpg')",
       },
       fontFamily: {
-        lato: ["Lato", "poppins"],
+        rubik: ["Rubik", "sans-serif"],
       },
       colors: {
         black: {
