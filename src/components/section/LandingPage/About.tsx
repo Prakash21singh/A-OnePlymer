@@ -28,46 +28,49 @@ const About = () => {
           <h3 className="text-xl lg:text-3xl font-medium text-yellow-1 mb-5">
             About us ____
           </h3>
-          <h1 className="text-2xl lg:text-4xl font-semibold my-4">
-            We Are Specialists in <b className="text-yellow-1">Plywood</b>{" "}
-            Solutions
+          <h1 className="text-2xl lg:text-4xl font-extrabold font-roboto tracking-wider  my-4 ">
+            We Are Specialists
+            <p>
+              {" "}
+              <b className="text-yellow-1">in Plywood</b> Solutions
+            </p>
           </h1>
-          <p className="font-medium text-base mx-2 my-4 flex gap-3">
+          <p className="font-medium text-[18px] tracking-wider mx-2 my-4 flex gap-3">
             With over 15+ years of expertise, Atoot Ply is committed to
             providing exceptional plywood products for all your building
             requirements. Our steadfast dedication to excellence and creativity
             ensures that you receive the finest in the sector.
           </p>
           <ul className="flex flex-col items-start gap-5">
-            <li className="flex  justify-start items-start">
+            <li className="flex items-center">
               <IconCircleCheckFilled
-                width={44}
+                width={49}
                 className="text-blue-500  hidden md:inline-block"
               />
-              <p className="font-medium text-base">
-                <b className="tracking-wider">Unparalleled Quality:</b> We
+              <p className="font-rubik text-[19px] tracking-wide">
+                <b className=" font-semibold">Unparalleled Quality:</b> We
                 utilize only the highest-grade materials to manufacture our
                 plywood, assuring durability and robustness.
               </p>
             </li>
             <li className="flex items-center">
               <IconCircleCheckFilled
-                width={44}
+                width={49}
                 className="text-blue-500 hidden md:inline-block"
               />
-              <p className="font-medium text-base">
-                <b className="tracking-wider">Cutting-edge Designs:</b> Stay in
+              <p className="font-rubik text-[19px] tracking-wide">
+                <b className=" font-semibold">Cutting-edge Designs:</b> Stay in
                 front with our contemporary and eco-friendly designs that meet
                 various construction demands.
               </p>
             </li>
             <li className="flex items-center ">
               <IconCircleCheckFilled
-                width={44}
+                width={49}
                 className="text-blue-500 hidden md:inline-block"
               />
-              <p className="font-medium text-base">
-                <b className="tracking-wider">Market Leader:</b> Valued by
+              <p className="font-rubik text-[19px] tracking-wide">
+                <b className=" font-semibold">Market Leader:</b> Valued by
                 industry experts, we establish the standard for quality and
                 dependability in plywood production.
               </p>

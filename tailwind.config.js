@@ -13,6 +13,12 @@ export default {
       },
       fontFamily: {
         rubik: ["Rubik", "sans-serif"],
+        roboto: ["Roboto"],
+        mons: ["Montserrat"],
+      },
+      fontSize: {
+        sm: "18px",
+        lg: "22px",
       },
       colors: {
         black: {
