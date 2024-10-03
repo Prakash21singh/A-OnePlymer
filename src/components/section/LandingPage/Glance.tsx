@@ -1,12 +1,16 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 export default function CompanyGlance() {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
-          A Glance at Our Company
-        </h2>
+        <TextGenerateEffect
+          start={2}
+          end={5}
+          words="A Glance at Our Company"
+          className="text-center px-4 text-wrap text-2xl md:text-3xl lg:text-5xl"
+        />
         <Card className="w-full max-w-4xl mx-auto overflow-hidden">
           <CardContent className="p-0 mx-auto">
             <div className="aspect-video relative mx-auto">
@@ -19,7 +23,7 @@ export default function CompanyGlance() {
             </div>
           </CardContent>
         </Card>
-        <p className="mt-4 text-center text-gray-600">
+        <p className="mt-4 text-base md:text-2xl text-center text-gray-600">
           Experience the energy and innovation that drives our company forward.
         </p>
       </div>

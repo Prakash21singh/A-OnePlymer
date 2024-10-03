@@ -56,12 +56,10 @@ const Navbar = () => {
                       delay: 0.05,
                     },
                   }}
-                  whileTap={{ scale: 0.9 }}>
-                  <Link
-                    to={link.link}
-                    className="hover:text-black-2 uppercase font-[500]">
-                    {link.label}
-                  </Link>
+                  whileTap={{ scale: 0.9 }}
+                  href={link.link}
+                  className="hover:text-black-2 uppercase font-[500]">
+                  {link.label}
                 </motion.a>
               );
             } else {
@@ -88,8 +86,9 @@ const Navbar = () => {
                         <motion.a
                           whileHover={{
                             translateX: "5px",
-                          }}>
-                          <Link to={child.link}>{child.label}</Link>
+                          }}
+                          href={child.link}>
+                          {child.label}
                         </motion.a>
                       </DropdownMenuItem>
                     ))}

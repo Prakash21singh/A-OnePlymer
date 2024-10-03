@@ -14,7 +14,8 @@ export default {
       fontFamily: {
         rubik: ["Rubik", "sans-serif"],
         roboto: ["Roboto"],
-        mons: ["Montserrat"],
+        Montserrat: ["Montserrat"],
+        lato: ["Lato"],
       },
       fontSize: {
         sm: "18px",

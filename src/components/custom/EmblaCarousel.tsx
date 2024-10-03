@@ -33,7 +33,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                   className={`embla__slide__number  border rounded-3xl shadow-md shadow-slate-300 w-full flex relative items-center justify-center h-full overflow-hidden`}
                   style={{
                     backgroundImage: `url(/${slide.image}.jpg)`,
-                    objectFit: "cover",
+                    objectFit: "contain",
                   }}>
                   <span className="absolute w-full left-0 right-0 h-full bg-black-1/80  z-0"></span>
                   <div className="w-full  mx-auto p-5  text-left flex flex-col h-full items-center lg:items-center justify-center select-none">
@@ -43,7 +43,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
 
                     {slide.slogan()}
                     <p
-                      className="text-center tracking-wide leading-8 lg:text-center text-base lg:text-lg w-full my-3 capitalize relative lg:w-[70%]  text-white font-medium"
+                      className="text-center md:tracking-wide md:leading-8 lg:text-center text-base lg:text-lg w-full my-3 capitalize relative lg:w-[70%]  text-white font-medium"
                       dir="ltr">
                       {slide.para}
                     </p>
