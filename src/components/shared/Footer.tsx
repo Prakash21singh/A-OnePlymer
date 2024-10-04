@@ -11,7 +11,7 @@ import { footerProductsLinks } from "../../constants";
 
 const Footer = () => {
   return (
-    <section className="w-full min-h-96 bg-blue-700 relative text-secondary grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
+    <section className="w-full min-h-96 bg-gray-800 relative text-secondary grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
       <div className="p-5">
         <h1 className="text-2xl lg:text-5xl font-semibold mb  -8">A-OnePly</h1>
         <p className="text-base font-normal my-4">
@@ -28,15 +28,15 @@ const Footer = () => {
       <div className="flex flex-col items-start gap-4 p-5">
         <h1 className="text-xl lg:text-2xl font-semibold relative">
           Our Products
-          <span className="absolute left-0 -bottom-2 w-[40px] h-[5px] bg-three rounded-md"></span>
+          <span className="absolute left-0 -bottom-2 w-[40px] h-[5px] bg-red-2 rounded-md"></span>
           <span className="absolute left-12 -bottom-2 w-[20px] h-[5px] bg-primary rounded-md"></span>
         </h1>
         {footerProductsLinks.map((link) => (
           <Link
             key={link.label}
             to={link.link}
-            className="flex items-center justify-center gap-3 hover:translate-x-3 transition hover:text-orange-600">
-            <IconChevronsRight className="text-three" /> {link.label}
+            className="flex items-center justify-center gap-3 hover:translate-x-3 transition hover:text-red-2">
+            <IconChevronsRight className="text-red-1" /> {link.label}
           </Link>
         ))}
       </div>
@@ -44,7 +44,7 @@ const Footer = () => {
         <h1 className="text-xl lg:text-2xl font-semibold relative">
           Contact Us
           <span className="absolute left-0 -bottom-2 w-[40px] h-[5px] bg-primary rounded-sm"></span>
-          <span className="absolute left-12 -bottom-2 w-[20px] h-[5px] bg-three rounded-sm"></span>
+          <span className="absolute left-12 -bottom-2 w-[20px] h-[5px] bg-red-1 rounded-sm"></span>
         </h1>
 
         <Link to={"/"} className="flex items-center gap-3">

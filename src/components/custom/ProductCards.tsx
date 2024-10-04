@@ -23,7 +23,7 @@ export default function ProductCards({ products }: { products: IProp[] }) {
         end={5}
         words="A Sight at Our Product"
         className="text-center px-4  text-wrap text-2xl md:text-3xl lg:text-5xl my-5"
-        textColor="text-yellow-1"
+        textColor="text-red-1"
       />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-4 lg:mt-10">
         {products.map((product, index) => (
@@ -31,7 +31,7 @@ export default function ProductCards({ products }: { products: IProp[] }) {
             key={index}
             className="overflow-hidden rounded-none border-none shadow-xl hover:-translate-y-3 transition relative p-1">
             {/* <span className="absolute w-[150px] h-[150px] right-0  bottom-0 bg-yellow-1"></span> */}
-            <span className="absolute w-[150px] h-[150px] left-0 top-0 bg-yellow-1"></span>
+            <span className="absolute w-[150px] h-[150px] left-0 top-0 bg-red-2"></span>
             <div className="relative">
               <img
                 src={product.image}

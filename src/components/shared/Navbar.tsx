@@ -101,7 +101,7 @@ const Navbar = () => {
 
         <Link
           to={""}
-          className="bg-blue-600 text-white border-none hidden lg:block rounded-sm hover:bg-blue-800 px-4 py-2">
+          className="bg-gray-800 text-white text-[18px] border-none hidden lg:block rounded-sm hover:bg-gray-900 px-4 py-2">
           Connect Now
         </Link>
 

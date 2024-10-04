@@ -25,14 +25,14 @@ const About = () => {
           </div>
         </div>
         <div className="w-full lg:w-1/2 h-full flex items-start justify-center flex-col">
-          <h3 className="text-xl lg:text-3xl  uppercase tracking-widest font-extrabold text-yellow-1 mb-5">
+          <h3 className="text-xl lg:text-3xl  uppercase tracking-widest font-extrabold text-red-2 mb-5">
             About us
           </h3>
           <h1 className="text-2xl lg:text-5xl font-extrabold  tracking-wider  my-4 ">
             We Are Specialists
             <p>
               {" "}
-              <b className="text-yellow-1">in Plywood</b> Solutions
+              <b className="text-red-2">in Plywood</b> Solutions
             </p>
           </h1>
           <p className="font-medium text-[18px] tracking-wider md:mx-2 my-4 flex gap-3">
@@ -48,8 +48,10 @@ const About = () => {
                 className="text-blue-500  hidden md:inline-block"
               />
               <p className="font-rubik text-[19px] tracking-wide">
-                <b className=" font-semibold">Unparalleled Quality:</b> We
-                utilize only the highest-grade materials to manufacture our
+                <b className=" font-semibold text-red-1">
+                  Unparalleled Quality:
+                </b>{" "}
+                We utilize only the highest-grade materials to manufacture our
                 plywood, assuring durability and robustness.
               </p>
             </li>
@@ -59,26 +61,28 @@ const About = () => {
                 className="text-blue-500 hidden md:inline-block"
               />
               <p className=" text-[19px] tracking-wide">
-                <b className=" font-semibold">Cutting-edge Designs:</b> Stay in
-                front with our contemporary and eco-friendly designs that meet
-                various construction demands.
+                <b className=" font-semibold text-red-1">
+                  Cutting-edge Designs:
+                </b>{" "}
+                Stay in front with our contemporary and eco-friendly designs
+                that meet various construction demands.
               </p>
             </li>
-            <li className="flex items-center ">
+            <li className="flex items-center">
               <IconCircleCheckFilled
                 width={49}
                 className="text-blue-500 hidden md:inline-block"
               />
               <p className=" text-[19px] tracking-wide">
-                <b className=" font-semibold">Market Leader:</b> Valued by
-                industry experts, we establish the standard for quality and
-                dependability in plywood production.
+                <b className=" font-semibold text-red-1">Market Leader:</b>{" "}
+                Valued by industry experts, we establish the standard for
+                quality and dependability in plywood production.
               </p>
             </li>
           </ul>
           <Link
             to={""}
-            className="bg-blue-600 my-4 lg:mx-2 text-white border-none rounded-sm hover:bg-blue-800 px-4 py-2">
+            className="bg-gray-800 md:my-2 text-white text-[18px] border-none hidden lg:block rounded-sm hover:bg-gray-900 px-4 py-2">
             Connect Now
           </Link>
         </div>

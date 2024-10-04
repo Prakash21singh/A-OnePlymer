@@ -54,39 +54,19 @@
     margin-top: 1.8rem;
   }
   .embla__buttons {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.6rem;
-    align-items: center;
+    align-items: center; */
   }
   .embla__button {
-    -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
-    -webkit-appearance: none;
-    appearance: none;
-    background-color: transparent;
-    touch-action: manipulation;
-    display: inline-flex;
-    text-decoration: none;
-    cursor: pointer;
-    border: 0;
-    padding: 0;
-    margin: 0;
-    box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
-    width: 3.6rem;
-    height: 3.6rem;
-    z-index: 1;
-    border-radius: 50%;
-    color: var(--text-body);
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
   .embla__button:disabled {
     color: var(--detail-high-contrast);
   }
   .embla__button__svg {
-    width: 35%;
-    height: 35%;
+    width: 34px;
+    height: 34px;
   }
   .embla__dots {
     display: flex;
@@ -132,35 +112,6 @@
   display: none;
 }
 
-@media (min-width: 1024px) {
-  .embla__controls {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 50%;
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
-    border: 2px solid red;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .embla__buttons {
-    position: absolute;
-    left: 0;
-  }
-
-  .embla__prev {
-    position: absolute;
-    right: 0; /* Left button on larger screens */
-  }
-
-  .embla__next {
-    right: 10px; /* Right button on larger screens */
-  }
-}
-
 @media (max-width: 724px) {
   .embla {
     max-width: 100%;
@@ -171,21 +122,6 @@
   }
 }
 
-@media (max-width: 1024px) {
-  .embla__controls {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-  }
-
-  .embla__prev,
-  .embla__next {
-    position: static; /* Bottom center buttons */
-  }
-}
 .theme-light {
   --brand-primary: rgb(47, 112, 193);
   --brand-secondary: rgb(116, 97, 195);

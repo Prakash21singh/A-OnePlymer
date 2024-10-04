@@ -42,7 +42,7 @@ export const TextGenerateEffect = ({
               className={` ${
                 idx > start && idx < end
                   ? textColor
-                  : "dark:text-white text-black"
+                  : "dark:text-white text-black z-10"
               } opacity-0`}>
               {word}{" "}
             </motion.span>

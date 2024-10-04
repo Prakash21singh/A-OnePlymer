@@ -3,13 +3,13 @@ import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 export default function CompanyGlance() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
+    <section className="w-full py-4 md:py-8 bg-gray-100">
       <div className="container mx-auto px-4 md:px-6">
         <TextGenerateEffect
           start={2}
           end={5}
           words="A Glance at Our Company"
-          className="text-center px-4 text-wrap text-2xl md:text-3xl lg:text-5xl"
+          className="text-center px-4 text-wrap text-2xl md:text-3xl lg:text-5xl uppercase"
         />
         <Card className="w-full max-w-4xl mx-auto overflow-hidden">
           <CardContent className="p-0 mx-auto">

@@ -10,6 +10,7 @@ export default {
         cr3: "url('/cr3.jpg')",
         cr4: "url('/cr4.jpg')",
         cr5: "url('/cr5.jpg')",
+        hero: "url('bghero.jpg')",
       },
       fontFamily: {
         rubik: ["Rubik", "sans-serif"],
@@ -17,8 +18,10 @@ export default {
         Montserrat: ["Montserrat"],
         lato: ["Lato"],
       },
+
       fontSize: {
         sm: "18px",
+        md: "20px",
         lg: "22px",
       },
       colors: {
@@ -32,6 +35,7 @@ export default {
         },
         gray: {
           1: "#F6F5F5",
+          2: "#d1d5db",
         },
         white: {
           DEFAULT: "#F6F6F6",
@@ -44,6 +48,7 @@ export default {
         secondary: "#e5f0fe",
         red: {
           1: "#B8001F",
+          2: "#C40C0C",
         },
       },
       screens: {
