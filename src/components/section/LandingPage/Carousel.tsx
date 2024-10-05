@@ -22,7 +22,7 @@ export default function Carousel() {
             duration: 0.7,
             ease: "easeInOut",
           }}
-          className="text-xl z-10 text-center lg:text-center md:text-3xl lg:text-5xl text-gray-2 femibold gap-2 rounded-md capitalize">
+          className="text-xl z-10 text-center lg:text-center md:text-3xl lg:text-5xl text-gray-2 femibold gap-2 rounded-md capitalize w-[80%] flex mx-auto justify-center flex-wrap">
           The best choice for
           <p className="text-red-2"> Furniture & Construction</p>
         </motion.h1>
@@ -39,7 +39,7 @@ export default function Carousel() {
             duration: 0.7,
             ease: "easeInOut",
           }}
-          className="text-xl z-10 text-center lg:text-center md:text-3xl lg:text-5xl text-gray-2 femibold gap-2 rounded-md capitalize">
+          className="text-xl z-10 text-center lg:text-center md:text-3xl lg:text-5xl text-gray-2 femibold gap-2 rounded-md capitalize w-[80%] flex mx-auto justify-center flex-wrap">
           Designed for a <p className="text-red-2"> Greener Future</p>
         </motion.h1>
       ),
@@ -55,7 +55,7 @@ export default function Carousel() {
             duration: 0.7,
             ease: "easeInOut",
           }}
-          className="text-xl z-10 text-center lg:text-center md:text-3xl lg:text-5xl text-gray-2 femibold gap-2 rounded-md capitalize">
+          className="text-xl z-10 text-center lg:text-center md:text-3xl lg:text-5xl text-gray-2 femibold gap-2 rounded-md capitalize w-[80%] flex mx-auto justify-center flex-wrap">
           Plywood Built to <p className="text-red-2">Endure</p>
         </motion.h1>
       ),
@@ -71,7 +71,7 @@ export default function Carousel() {
             duration: 0.7,
             ease: "easeInOut",
           }}
-          className="text-xl z-10 text-center lg:text-center md:text-3xl lg:text-5xl text-gray-2 femibold gap-2 rounded-md capitalize">
+          className="text-xl z-10 text-center lg:text-center md:text-3xl lg:text-5xl text-gray-2 femibold gap-2 rounded-md capitalize w-[80%] flex mx-auto justify-center flex-wrap">
           Tailored Solutions for <p className="text-red-2"> Every Project</p>
         </motion.h1>
       ),
@@ -87,7 +87,7 @@ export default function Carousel() {
             duration: 0.7,
             ease: "easeInOut",
           }}
-          className="text-xl z-10 text-center lg:text-center md:text-3xl lg:text-5xl text-gray-2 femibold gap-2 rounded-md capitalize">
+          className="text-xl z-10 text-center lg:text-center md:text-3xl lg:text-5xl text-gray-2 femibold gap-2 rounded-md capitalize w-[80%] flex mx-auto justify-center flex-wrap">
           Precision Engineered <p className="text-red-2"> Plywood </p>
         </motion.h1>
       ),
@@ -97,7 +97,7 @@ export default function Carousel() {
   ];
 
   return (
-    <div className="w-full h-[75dvh] my-4 md:my-16">
+    <div className="w-full h-[75dvh] my-4 md:my-16 font-rubik">
       <EmblaCarousel
         slides={SLIDES}
         options={OPTIONS}

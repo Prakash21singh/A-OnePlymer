@@ -9,3 +9,6 @@ export const Carousel = lazy(() => import("./section/LandingPage/Carousel"));
 export const About = lazy(() => import("./section/LandingPage/About"));
 export const Glance = lazy(() => import("./section/LandingPage/Glance"));
 export const Products = lazy(() => import("./section/LandingPage/Products"));
+export const Making = lazy(() => import("./section/LandingPage/Making"));
+export const Trust = lazy(() => import("./section/LandingPage/Trust"));
+export const Gallery = lazy(() => import("./section/LandingPage/Gallery"));

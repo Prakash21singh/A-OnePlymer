@@ -2,7 +2,7 @@ import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { motion } from "framer-motion";
 const Hero = () => {
   return (
-    <section className="h-[70vh] bg-hero bg-center bg-no-repeat bg-cover w-full flex items-center justify-center flex-col relative p-2 lg:p-0 z-10 ">
+    <section className="font-rubik h-[70vh] bg-hero bg-center bg-no-repeat bg-cover w-full flex items-center justify-center flex-col relative p-2 lg:p-0 z-10 ">
       <span className="absolute w-full left-0 right-0 h-full bg-black-1/80  -z-50"></span>
       <motion.p
         animate={{

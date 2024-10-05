@@ -1,4 +1,13 @@
-import { About, Carousel, Hero, Glance, Products } from "@/components";
+import {
+  About,
+  Carousel,
+  Hero,
+  Glance,
+  Products,
+  Making,
+  Trust,
+  Gallery,
+} from "@/components";
 
 const LandingPage = () => {
   return (
@@ -8,6 +17,9 @@ const LandingPage = () => {
       <About />
       <Glance />
       <Products />
+      <Making />
+      <Trust />
+      <Gallery />
     </div>
   );
 };

@@ -29,7 +29,7 @@ export default function ProductCards({ products }: { products: IProp[] }) {
         {products.map((product, index) => (
           <Card
             key={index}
-            className="overflow-hidden rounded-none border-none shadow-xl hover:-translate-y-3 transition relative p-1">
+            className="overflow-hidden rounded-none border-none shadow-xl hover:-translate-y-3 transition relative p-1 flex flex-col justify-between">
             {/* <span className="absolute w-[150px] h-[150px] right-0  bottom-0 bg-yellow-1"></span> */}
             <span className="absolute w-[150px] h-[150px] left-0 top-0 bg-red-2"></span>
             <div className="relative">
@@ -49,7 +49,7 @@ export default function ProductCards({ products }: { products: IProp[] }) {
             <CardContent className="bg-transparent px-4">
               <p className="text-sm text-gray-600">{product.description}</p>
             </CardContent>
-            <CardFooter className="bg-yellow-1/10 p-4 z-10">
+            <CardFooter className="bg-yellow-1/10 p-4 z-10  ">
               <Link
                 to={product.link}
                 className="bg-red-1 hover:bg-[#e09500] px-4 rounded-sm transition py-2 text-white">

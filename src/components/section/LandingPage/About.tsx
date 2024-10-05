@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <div className="w-full h-auto lg:h-screen p-10 md:my-10">
+    <div className="w-full h-auto lg:h-screen p-10 md:my-10 font-rubik">
       <div className="w-full h-full flex flex-col lg:flex-row items-center justify-center">
         <div className="w-full lg:w-1/2 h-[50vh] lg:h-full relative">
           <div className="w-full relative h-full">
@@ -28,7 +28,7 @@ const About = () => {
           <h3 className="text-xl lg:text-3xl  uppercase tracking-widest font-extrabold text-red-2 mb-5">
             About us
           </h3>
-          <h1 className="text-2xl lg:text-5xl font-extrabold  tracking-wider  my-4 ">
+          <h1 className="text-2xl lg:text-5xl font-bold  tracking-wider  my-4 ">
             We Are Specialists
             <p>
               {" "}
