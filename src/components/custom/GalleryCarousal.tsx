@@ -1,99 +1,176 @@
-import React, { useCallback, useState, useEffect } from "react";
-import { EmblaCarouselType, EmblaOptionsType } from "embla-carousel";
-import Autoplay from "embla-carousel-autoplay";
+import { useState, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import {
-  NextButton,
-  PrevButton,
-  usePrevNextButtons,
-} from "./EmblaCarouselArrowButtons";
+import { IconArrowLeft, IconArrowRight, IconPlus, IconX } from "@tabler/icons-react";
+import { motion } from "framer-motion";
 
-interface slide {
-  title: string;
-  slogan: (isActive: boolean) => React.ReactNode;
-  para: string;
-  image: string;
-}
+const images = [
+  "/cr1.jpg",
+  "/cr2.jpg",
+  "/cr3.jpg",
+  "/cr4.jpg",
+  "/cutting.jpg",
+  "/cutter.jpg",
+];
 
-type PropType = {
-  slides: slide[];
-  options?: EmblaOptionsType;
-  onSlideChange?: (index: number) => void; // Add onSlideChange prop
-  activeIndex: any;
-};
+const GalleryCarousel = () => {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null); // track the index instead of the image
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [isHovering, setIsHovering] = useState<boolean>(false);
 
-Autoplay.globalOptions = { delay: 3000 };
+  const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
 
-const GalleryCarousal: React.FC<PropType> = (props) => {
-  const { slides, options, onSlideChange } = props;
-  const [emblaRef, emblaApi] = useEmblaCarousel(
-    { ...options, align: "center" },
-    [Autoplay({ delay: 3000 })]
-  );
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const closeModal = () => setSelectedImageIndex(null);
 
-  const onNavButtonClick = useCallback((emblaApi: EmblaCarouselType) => {
-    const autoplay = emblaApi?.plugins()?.autoplay;
-    if (!autoplay) return;
+  // Function to navigate images in modal
+  const goToPrevImage = () => {
+    if (selectedImageIndex !== null) {
+      const newIndex = (selectedImageIndex - 1 + images.length) % images.length;
+      setSelectedImageIndex(newIndex);
+    }
+  };
 
-    const resetOrStop =
-      autoplay.options.stopOnInteraction === false
-        ? autoplay.reset
-        : autoplay.stop;
-
-    resetOrStop();
-  }, []);
-
-  const {
-    prevBtnDisabled,
-    nextBtnDisabled,
-    onPrevButtonClick,
-    onNextButtonClick,
-  } = usePrevNextButtons(emblaApi, onNavButtonClick);
-
-  // Event listener to update current slide index and notify parent component
-  useEffect((): any => {
-    if (!emblaApi) return;
-
-    const handleSelect = () => {
-      const selectedIndex = emblaApi.selectedScrollSnap();
-      setCurrentIndex(selectedIndex);
-
-      // Call the parent onSlideChange callback
-      if (onSlideChange) {
-        onSlideChange(selectedIndex);
-      }
-    };
-
-    emblaApi.on("select", handleSelect);
-    handleSelect(); // Set initial index on load
-
-    return () => emblaApi.off("select", handleSelect);
-  }, [emblaApi, onSlideChange]); // Add onSlideChange as a dependency
+  const goToNextImage = () => {
+    if (selectedImageIndex !== null) {
+      const newIndex = (selectedImageIndex + 1) % images.length;
+      setSelectedImageIndex(newIndex);
+    }
+  };
 
   return (
-    <div className="relative h-full w-full ">
-      <section className="embla gap-14 relative border-none  h-full " dir="ltr">
-        <div className="embla__viewport" ref={emblaRef}>
-          <div className="embla__container ">
-            <div className="embla_slide cursor-pointer p-5">
-                <div className="embla__slide__number"></div>
+    <div className="carousel-container w-[80%] mx-auto relative select-none"
+      onMouseEnter={() => setIsHovering(true)}
+      onMouseLeave={() => setIsHovering(false)}
+    >
+      <div className="carousel-wrapper" ref={emblaRef}>
+        <div className="carousel flex">
+          {images.map((image, index) => (
+            <div
+              className="carousel-slide relative mx-3"
+              key={index}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
+              <div className="slide-content relative shadow-lg rounded-md overflow-hidden transition-all duration-600 ease-in-out">
+                <img src={image} alt={`Slide ${index}`} className="block w-full h-auto" />
+                {hoveredIndex === index && (
+                  <div
+                    className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center transition duration-600 ease-in-out"
+                    onClick={() => setSelectedImageIndex(index)} // Set index of the clicked image
+                  >
+                    <IconPlus className="text-black-1 text-4xl bg-red-1/50 rounded-lg " width={52} height={52} />
+                  </div>
+                )}
+              </div>
             </div>
+          ))}
+        </div>
+      </div>
+
+      {isHovering && (
+        <>
+          <motion.button
+            animate={{
+              translateY: [10, -20],
+              opacity: [0, 1],
+            }}
+            transition={{
+              duration: 0.3,
+              ease: "easeInOut",
+            }}
+            className="hidden md:flex absolute top-1/2 left-2 -translate-y-1/2 text-gray-700 bg-white p-2 rounded-full"
+            onClick={scrollPrev}
+          >
+            <IconArrowLeft />
+          </motion.button>
+          <motion.button
+            animate={{
+              translateY: [10, -20],
+              opacity: [0, 1],
+            }}
+            transition={{
+              duration: 0.3,
+              ease: "easeInOut",
+            }}
+            className="hidden md:flex absolute top-1/2 right-2 -translate-y-1/2 text-gray-700 bg-white p-2 rounded-full"
+            onClick={scrollNext}
+          >
+            <IconArrowRight />
+          </motion.button>
+        </>
+      )}
+
+<div className="flex md:hidden">
+<motion.button
+            animate={{
+              translateY: [10, -20],
+              opacity: [0, 1],
+            }}
+            transition={{
+              duration: 0.3,
+              ease: "easeInOut",
+            }}
+            className="absolute top-1/2 left-2 -translate-y-1/2 text-gray-700 bg-white p-2 rounded-full"
+            onClick={scrollPrev}
+          >
+            <IconArrowLeft />
+          </motion.button>
+          <motion.button
+            animate={{
+              translateY: [10, -20],
+              opacity: [0, 1],
+            }}
+            transition={{
+              duration: 0.3,
+              ease: "easeInOut",
+            }}
+            className="absolute top-1/2 right-2 -translate-y-1/2 text-gray-700 bg-white p-2 rounded-full"
+            onClick={scrollNext}
+          >
+            <IconArrowRight />
+          </motion.button>
+</div>
+      
+      {selectedImageIndex !== null && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50"
+        >
+            <div className="bg-black-1/70 -z-10 w-full h-full absolute">
+
+            </div>
+          <div className="relative w-[80vw] h-[80vh] md:w-[90vw] md:h-[90vh] flex items-center justify-center">
+            <img
+              src={images[selectedImageIndex]}
+              alt={`Slide ${selectedImageIndex}`}
+              className="object-cover w-full h-full rounded-lg shadow-lg"
+            />
+
+            <button
+              className="absolute top-5 right-5 bg-white p-2 rounded-full shadow-md"
+              onClick={closeModal}
+            >
+              <IconX/>
+            </button>
+
+            <button
+              className="absolute top-1/2 left-5 -translate-y-1/2 text-white bg-red-1 bg-black bg-opacity-50 p-2 rounded-full"
+              onClick={goToPrevImage}
+            >
+              <IconArrowLeft />
+            </button>
+
+            <button
+              className="absolute top-1/2 right-5 -translate-y-1/2 text-white bg-red-1 bg-black bg-opacity-50 p-2 rounded-full"
+              onClick={goToNextImage}
+            >
+              <IconArrowRight />
+            </button>
           </div>
         </div>
-      </section>
-      <PrevButton
-        onClick={onPrevButtonClick}
-        disabled={prevBtnDisabled}
-        className="absolute left-[20%] lg:left-3 translate-y-1/2 px-5 lg:px-10 py-2  rounded-md z-10 bg-white/10 bottom-16 lg:bottom-1/2 inline-block"
-      />
-      <NextButton
-        onClick={onNextButtonClick}
-        className="absolute right-[20%] lg:right-3 translate-y-1/2 px-5 md:px-10 py-2  rounded-md z-10 bg-white/10 bottom-16 lg:bottom-1/2 inline-block"
-        disabled={nextBtnDisabled}
-      />
+      )}
     </div>
   );
 };
 
-export default GalleryCarousal;
+export default GalleryCarousel;

@@ -190,3 +190,131 @@
   --admonition-warning-rgb-value: 253, 186, 116;
   --admonition-danger-rgb-value: 220, 38, 38;
 }
+
+
+.carousel-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.carousel-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.carousel {
+  display: flex;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  position: relative;
+}
+
+.slide-content {
+  position: relative;
+}
+
+.slide-content img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.6s all ease-in;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.slide-content:hover .overlay {
+  opacity: 1;
+}
+
+.plus-icon {
+  color: white;
+  font-size: 2rem;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  color: #ffa500;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  outline: none;
+}
+
+.modal img {
+  max-width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.close-modal {
+  margin-top: 10px;
+  background: #ffa500;
+  color: white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+  .carousel-slide {
+    min-width: 33.33%; /* Show 3 images at once on larger screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-slide {
+    min-width: 100%; /* Show 1 image at a time on mobile */
+  }
+}
+
+
+.transition-ease {
+   transition: 0.6s all ease-in;
+}

@@ -1,3 +1,4 @@
+import GalleryCarousal from "@/components/custom/GalleryCarousal";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 const Gallery = () => {
@@ -10,6 +11,9 @@ const Gallery = () => {
         className="text-center px-4  text-wrap text-2xl md:text-3xl lg:text-5xl "
         textColor="text-red-1"
       />
+      <div className="w-full mb-8 lg:mb-12">
+        <GalleryCarousal/>
+      </div>
     </div>
   );
 };
