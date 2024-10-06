@@ -9,7 +9,7 @@ const Hero = () => {
           y: [-20, 0],
 
           transition: {
-            duration: 1.5,
+            duration: 0.8,
             ease: "easeInOut",
           },
         }}
@@ -30,7 +30,7 @@ const Hero = () => {
           opacity: [0, 1],
 
           transition: {
-            duration: 1.5,
+            duration: 0.8,
             delay: 1,
             ease: "easeInOut",
           },
