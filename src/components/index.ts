@@ -12,3 +12,6 @@ export const Products = lazy(() => import("./section/LandingPage/Products"));
 export const Making = lazy(() => import("./section/LandingPage/Making"));
 export const Trust = lazy(() => import("./section/LandingPage/Trust"));
 export const Gallery = lazy(() => import("./section/LandingPage/Gallery"));
+export const Testimonial = lazy(
+  () => import("./section/LandingPage/Testimonial")
+);

@@ -12,7 +12,7 @@ const Gallery = () => {
         textColor="text-red-1"
       />
       <div className="w-full mb-8 lg:mb-12">
-        <GalleryCarousal/>
+        <GalleryCarousal />
       </div>
     </div>
   );
