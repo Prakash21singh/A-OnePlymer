@@ -3,7 +3,7 @@ import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 const Testimonial = () => {
   return (
-    <div className="w-full p-4 border my-4 lg:my-8">
+    <div className="w-full p-4 border my-4 lg:my-8 bg-gray-1">
       <TextGenerateEffect
         start={1}
         end={3}

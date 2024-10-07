@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 
 const testimonials = [
   {
@@ -35,15 +34,6 @@ const TestimonialCard = () => {
     Autoplay({ delay: 5000 }),
   ]);
   const [selectedIndex, setSelectedIndex] = useState(0);
-
-  const scrollPrev = useCallback(
-    () => emblaApi && emblaApi.scrollPrev(),
-    [emblaApi]
-  );
-  const scrollNext = useCallback(
-    () => emblaApi && emblaApi.scrollNext(),
-    [emblaApi]
-  );
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
