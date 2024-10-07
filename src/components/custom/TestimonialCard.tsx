@@ -46,14 +46,19 @@ const TestimonialCard = () => {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="carousel-container w-[90%] mx-auto relative select-none">
+    <div className="carousel-container  mx-auto relative select-none py-5 lg:py-10">
       <div className="carousel-wrapper" ref={emblaRef}>
         <div className="carousel flex">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="carousel-slide flex-none mx-3 w-full md:w-1/2 lg:w-1/3 bg-white p-5 rounded-lg shadow-lg">
-              <p className="text-lg font-light">{testimonial.text}</p>
+              className="carousel-slide  mx-3 w-full md:w-1/2 lg:w-[25%] bg-white p-5 rounded-lg shadow-lg">
+              <img
+                src="/icons/quote-left.png"
+                alt="IconQuote"
+                className="w-8 lg:w-12 my-4 "
+              />
+              <p className="text-sm font-light">{testimonial.text}</p>
               <h4 className="font-semibold mt-4">~ {testimonial.author}</h4>
             </div>
           ))}
@@ -66,7 +71,7 @@ const TestimonialCard = () => {
           <button
             key={index}
             className={`w-3 h-3 rounded-full ${
-              selectedIndex === index ? "bg-blue-600" : "bg-gray-400"
+              selectedIndex === index ? "bg-red-2" : "bg-gray-700"
             }`}
             // @ts-ignore
             onClick={() => emblaApi.scrollTo(index)}></button>

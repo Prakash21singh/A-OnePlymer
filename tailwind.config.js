@@ -10,7 +10,7 @@ export default {
         cr3: "url('/cr3.jpg')",
         cr4: "url('/cr4.jpg')",
         cr5: "url('/cr5.jpg')",
-        hero: "url('/bghero.jpg')",
+        hero: "url('/bg-hero2.jpg')",
       },
       fontFamily: {
         rubik: ["Rubik", "sans-serif"],

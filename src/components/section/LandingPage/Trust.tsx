@@ -26,7 +26,7 @@ const Trust = () => {
           textColor="text-red-1"
         />
 
-        <p className="text-[16px] lg:text-[18px] tracking-wide leading-6 lg:leading-9 my-1 md:my-3 lg:w-[85%]">
+        <p className="text-[16px] tracking-wider lg:text-[18px]  leading-6 lg:leading-9 my-1 md:my-2 lg:w-[85%]">
           At Atoot Ply, we believe in building lasting relationships with our
           customers through superior craftsmanship and unwavering dedication.
           Here’s why you should choose us:
@@ -43,7 +43,7 @@ const Trust = () => {
                 height={34}
               />
               <span className="flex flex-col">
-                <h2 className="text-md md:text-lg font-semibold tracking-wider mb-3">
+                <h2 className="text-md md:text-lg font-semibold tracking-wider mb-1">
                   {data.heading}
                 </h2>
                 <p className="text-gray-500 text-sm font-extralight">

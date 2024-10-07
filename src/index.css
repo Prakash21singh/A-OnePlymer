@@ -230,7 +230,15 @@
 
 .carousel-slide {
   background-color: white;
-  padding: 1.25rem;
+  padding: 1rem;
+}
+
+.fade {
+  opacity: 0;
+  transition: 0.5s all;
+}
+.fade:hover {
+  opacity: 1;
 }
 
 .overlay {

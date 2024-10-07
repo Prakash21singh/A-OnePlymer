@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <div className="w-full h-auto lg:h-screen p-10 md:my-10 font-rubik">
+    <div className="w-full h-auto lg:h-screen px-10 my-4 lg:my-8 font-rubik border">
       <div className="w-full h-full flex flex-col lg:flex-row items-center justify-center">
         <div className="w-full lg:w-1/2 h-[50vh] lg:h-full relative">
           <div className="w-full relative h-full">
@@ -25,14 +25,14 @@ const About = () => {
           </div>
         </div>
         <div className="w-full lg:w-1/2 h-full flex items-start justify-center flex-col">
-          <h3 className="text-xl lg:text-3xl  uppercase tracking-widest font-extrabold text-red-2 mb-5">
+          <h3 className="text-xl lg:text-3xl  uppercase tracking-widest font-semibold text-red-2 lg:mb-5">
             About us
           </h3>
-          <h1 className="text-2xl lg:text-5xl font-bold  tracking-wider  my-4 ">
+          <h1 className="text-2xl lg:text-5xl font-semibold  tracking-wider  my-2 lg:my-4 ">
             We Are Specialists
             <p>
               {" "}
-              <b className="text-red-2">in Plywood</b> Solutions
+              <span className="text-red-2">in Plywood</span> Solutions
             </p>
           </h1>
           <p className="font-medium text-[18px] tracking-wider md:mx-2 my-4 flex gap-3">
@@ -42,11 +42,8 @@ const About = () => {
             ensures that you receive the finest in the sector.
           </p>
           <ul className="flex flex-col items-start gap-5">
-            <li className="flex items-center">
-              <IconCircleCheckFilled
-                width={49}
-                className="text-blue-500  hidden md:inline-block"
-              />
+            <li className="flex justify-start gap-2">
+              <IconCircleCheckFilled width={49} className="text-yellow-2" />
               <p className="font-rubik text-[19px] tracking-wide">
                 <b className=" font-semibold text-red-1">
                   Unparalleled Quality:
@@ -55,11 +52,8 @@ const About = () => {
                 plywood, assuring durability and robustness.
               </p>
             </li>
-            <li className="flex items-center">
-              <IconCircleCheckFilled
-                width={49}
-                className="text-blue-500 hidden md:inline-block"
-              />
+            <li className="flex justify-start gap-2">
+              <IconCircleCheckFilled width={49} className="text-yellow-2" />
               <p className=" text-[19px] tracking-wide">
                 <b className=" font-semibold text-red-1">
                   Cutting-edge Designs:
@@ -68,11 +62,8 @@ const About = () => {
                 that meet various construction demands.
               </p>
             </li>
-            <li className="flex items-center">
-              <IconCircleCheckFilled
-                width={49}
-                className="text-blue-500 hidden md:inline-block"
-              />
+            <li className="flex justify-start gap-2">
+              <IconCircleCheckFilled width={49} className="text-yellow-2" />
               <p className=" text-[19px] tracking-wide">
                 <b className=" font-semibold text-red-1">Market Leader:</b>{" "}
                 Valued by industry experts, we establish the standard for

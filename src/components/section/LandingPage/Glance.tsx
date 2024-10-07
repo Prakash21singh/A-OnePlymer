@@ -9,7 +9,7 @@ export default function CompanyGlance() {
           start={2}
           end={5}
           words="A Glance at Our Company"
-          className="text-center px-4 text-wrap text-2xl md:text-3xl lg:text-5xl capitalize"
+          className="text-center px-4  text-wrap text-2xl md:text-3xl lg:text-5xl my-5"
         />
         <Card className="w-full max-w-4xl mx-auto overflow-hidden">
           <CardContent className="p-0 mx-auto">
