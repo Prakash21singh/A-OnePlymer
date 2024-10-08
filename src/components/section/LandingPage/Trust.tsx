@@ -4,7 +4,7 @@ import { IconCircleCheckFilled } from "@tabler/icons-react";
 
 const Trust = () => {
   return (
-    <div className="w-full min-h-screen relative flex flex-col  lg:flex-row lg:justify-end text-white">
+    <div className="w-full lg:min-h-screen relative flex flex-col  lg:flex-row lg:justify-end text-white">
       {/* Image Section */}
       <img
         src="/cutting.jpg"
@@ -13,7 +13,7 @@ const Trust = () => {
       />
 
       {/* Content Section */}
-      <div className="w-full lg:w-1/2 flex flex-col py-4 px-6 lg:px-12 bg-gray-800">
+      <div className="w-full h-full lg:w-1/2 flex flex-col py-4 px-6 lg:px-12 bg-gray-800">
         <h1 className="text-xl lg:text-2xl uppercase text-red-2">
           Why Choose Us
         </h1>
